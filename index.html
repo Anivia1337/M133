@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Seitenname -->
+    <title>Stundenplan</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- jquery laden -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!--  bootstrap zur seite hinzufügen -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Modul 133</h1>
+
+    <h2>Beruf</h2>
+    <!-- Dropdown Berufswahl -->
+    <select id="berufe" class="formular">
+        <option value="" selected>Option wählen</option>
+        <!-- Auswahl durch js hinzugefügt -->
+    </select>
+
+    <h2>Schulklasse</h2>
+    <!-- dropdown Schulklasse -->
+    <select id="klassen" class="formular">
+        <option value="" selected>Option wählen</option>
+        <!-- Auswahl durch js hinzugefügt -->
+    </select>
+
+    <h3>Woche</h3>
+    <!-- Wochenauswahl -->
+    <nav>
+        <ul class="nummerierung">
+            <li class="wochenavigation">
+                <button id="wochealt" class="wochelink">«</button>
+            </li>
+            <li class="wochenavigation">
+                <!-- Wird von js zur aktuellen Woche geändert -->
+                <p id="wocheaktuell" class="wochelink">99-9999</p>
+            </li>
+            <li class="wochenavigation">
+                <button id="wocheneu" class="wochelink">»</button>
+            </li>
+        </ul>
+    </nav>
+
+    <h2>Stundenplan</h2>
+    <!-- Tabelle für Schulklasse -->
+    <table class="tabelle">
+        <tr>
+            <th>Datum</th>
+            <th>Wochentag</th>
+            <th>Von</th>
+            <th>Bis</th>
+            <th>Lehrer</th>
+            <th>Fach</th>
+            <th>Raum</th>
+        </tr>
+        <tr id="tabelle">
+            <!-- Inhalt wird durch js hinzugefügt -->
+        </tr>
+    </table>
+
+    <!-- js lädt, nachdem Seite geladen hat -->
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
