@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -20,14 +20,14 @@
 
     <h2>Beruf</h2>
     <!-- Dropdown Berufswahl -->
-    <select id="berufe" class="formular">
+    <select id="berufe" class="form-select">
         <option value="" selected>Option wählen</option>
         <!-- Auswahl durch js hinzugefügt -->
     </select>
 
     <h2>Schulklasse</h2>
     <!-- dropdown Schulklasse -->
-    <select id="klassen" class="formular">
+    <select id="klassen" class="form-select">
         <option value="" selected>Option wählen</option>
         <!-- Auswahl durch js hinzugefügt -->
     </select>
@@ -35,39 +35,43 @@
     <h3>Woche</h3>
     <!-- Wochenauswahl -->
     <nav>
-        <ul class="nummerierung">
-            <li class="wochenavigation">
-                <button id="wochealt" class="wochelink">«</button>
+        <ul class="pagination">
+            <li class="page-item">
+                <button id="wochealt" class="page-link">«</button>
             </li>
-            <li class="wochenavigation">
-                <!-- Wird von js zur aktuellen Woche geändert -->
-                <p id="wocheaktuell" class="wochelink">99-9999</p>
+            <li class="page-item">
+                <!-- js ändert die woche automatisch -->
+                <p id="wocheaktuell" class="page-link">0</p>
             </li>
-            <li class="wochenavigation">
-                <button id="wocheneu" class="wochelink">»</button>
+            <li class="page-item">
+                <button id="wocheneu" class="page-link">»</button>
             </li>
         </ul>
     </nav>
-
     <h2>Stundenplan</h2>
     <!-- Tabelle für Schulklasse -->
-    <table class="tabelle">
-        <tr>
-            <th>Datum</th>
-            <th>Wochentag</th>
-            <th>Von</th>
-            <th>Bis</th>
-            <th>Lehrer</th>
-            <th>Fach</th>
-            <th>Raum</th>
-        </tr>
-        <tr id="tabelle">
-            <!-- Inhalt wird durch js hinzugefügt -->
-        </tr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Wochentag</th>
+                <th>Von</th>
+                <th>Bis</th>
+                <th>Lehrer</th>
+                <th>Fach</th>
+                <th>Raum</th>
+            </tr>
+     
+        <tbody id="table">
+            <!-- Inhalt kommt von js -->
+        </tbody>
     </table>
 
     <!-- js lädt, nachdem Seite geladen hat -->
     <script src="js/script.js" defer></script>
+</body>
+
+</html>
 </body>
 
 </html>
